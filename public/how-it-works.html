@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How it Works — GenMedia</title>
+  <meta name="description" content="The three architectures behind generative AI: Diffusion models, GANs, and Transformers, explained in plain English.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/logo.svg" alt="GenMedia Logo">
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="images.html">Image Generation</a></li>
+          <li><a href="audio-video.html">Audio &amp; Video</a></li>
+          <li><a href="how-it-works.html">How it Works</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Page Hero ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>How it Works</h1>
+      <p>The three architectures behind generative models.</p>
+    </div>
+  </section>
+
+  <!-- ============ Intro ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">A Quick Overview</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        We'll keep the math out of this and stick to the intuition.
+        Generative AI tools all share the same general recipe: train a large
+        neural network on a huge collection of examples, let it learn the
+        patterns inside that data, then ask it to produce something new
+        that follows those patterns. The interesting differences are in
+        <em>how</em> the network learns. Three architectures dominate
+        today's tools.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Diffusion ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Diffusion Models</h2>
+
+      <img src="assets/diagrams/diffusion-diagram.svg"
+           alt="Diffusion model: forward step adds noise to an image, reverse step removes it to generate a new picture"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
+
+      <p style="max-width: 800px; margin: 0 auto; color: var(--text); font-size: 16px;">
+        A diffusion model learns by watching images get destroyed. During
+        training, the network is shown a real image, then a slightly noisier
+        version, then a noisier one, until the picture is pure static.
+        It learns to <strong>reverse</strong> that process — to remove a
+        little bit of noise at a time. To generate a new picture, the model
+        starts from random noise and step by step "denoises" it into an
+        image that matches the prompt.
+      </p>
+
+      <p style="max-width: 800px; margin: 25px auto 0; color: var(--text-light); font-size: 15px; font-style: italic; border-left: 3px solid var(--accent); padding-left: 14px;">
+        Diffusion is the engine inside Stable Diffusion, DALL-E 3, and
+        Sora. The same idea has been adapted from images to audio and video.
+        <br>
+        <span class="ai-badge">🤖 Paragraph drafted with AI assistance</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ GANs ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">GANs (Generative Adversarial Networks)</h2>
+
+      <img src="assets/diagrams/gan-diagram.svg"
+           alt="GAN: a generator network produces fakes while a discriminator network judges them; both train against each other"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
+
+      <p style="max-width: 800px; margin: 0 auto; color: var(--text); font-size: 16px;">
+        A GAN is a contest between two networks. The <strong>generator</strong>
+        is a forger that tries to produce fake images. The <strong>discriminator</strong>
+        is an inspector that tries to tell real images from fakes. They train
+        together: every time the inspector spots a fake, the forger learns
+        to do better. After many rounds, the forger can produce images good
+        enough to fool both the inspector and most humans.
+      </p>
+
+      <p style="max-width: 800px; margin: 20px auto 0; color: var(--text-light); font-size: 15px;">
+        GANs were the dominant approach for image generation roughly between
+        2018 and 2022. They are still used in some tools — especially face
+        generation and image-to-image translation — but most flagship image
+        models have shifted to Diffusion since then.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Transformers ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Transformers</h2>
+
+      <img src="assets/diagrams/transformer-diagram.svg"
+           alt="Transformer: input tokens flow through self-attention layers; each token can attend to all others to predict the next"
+           style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;">
+
+      <p style="max-width: 800px; margin: 0 auto; color: var(--text); font-size: 16px;">
+        Transformers were originally designed for language. The key idea is
+        the <strong>attention</strong> mechanism: when the network reads a
+        sequence (say, a sentence), it can decide which earlier words are
+        most relevant for predicting the next one. This turns out to be a
+        very flexible building block. The same architecture, with small
+        adjustments, now powers chatbots, voice models, music models, and
+        the text-understanding parts of image and video generators.
+      </p>
+
+      <p style="max-width: 800px; margin: 20px auto 0; color: var(--text-light); font-size: 15px;">
+        Most modern generative tools are <em>hybrids</em>: a Transformer
+        reads and understands the prompt, then hands its output to a
+        Diffusion model that draws the image, or to another Transformer
+        that produces the audio.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Comparison Table ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Side-by-Side Comparison</h2>
+
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Architecture</th>
+              <th>What it generates today</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Diffusion</strong></td>
+              <td>Images, video, audio</td>
+              <td>High quality, controllable, current state of the art for images</td>
+              <td>Slow at generation time (many denoising steps)</td>
+            </tr>
+            <tr>
+              <td><strong>GANs</strong></td>
+              <td>Faces, image-to-image, some video</td>
+              <td>Fast at generation, sharp results</td>
+              <td>Hard to train, prone to "mode collapse" (limited variety)</td>
+            </tr>
+            <tr>
+              <td><strong>Transformers</strong></td>
+              <td>Text, code, music, audio, multimodal</td>
+              <td>Scales very well, handles long context</td>
+              <td>Heavy on memory and compute, especially for long sequences</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Why it Matters ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Why This Matters</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        Knowing which architecture is behind a tool helps explain its
+        behavior — why Diffusion-based image tools are slow but detailed,
+        why Transformer-based chat models can drift on long answers, and
+        why most modern systems combine both. Understanding the basics
+        is also the first step toward using these tools responsibly.
+        This is a simplified view — each of these architectures has years
+        of research behind it, and we've only touched the surface.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 GenMedia — BMM601 Course Assignment, Syrian Virtual University</p>
+      <p>Supervisor: Eng. Talal M. W. Antakieli</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

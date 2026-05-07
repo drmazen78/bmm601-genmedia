@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Logo for GenMedia website - BMM601 -->
+<!-- Palette: deep blue + orange -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+
+  <!-- Icon: a circle containing a small neural network (AI metaphor) -->
+  <g transform="translate(10, 10)">
+    <!-- Background circle -->
+    <circle cx="30" cy="30" r="28" fill="#1E3A8A" />
+
+    <!-- Three layers of neurons -->
+    <!-- Layer 1 (left) -->
+    <circle cx="14" cy="18" r="3" fill="#F59E0B"/>
+    <circle cx="14" cy="30" r="3" fill="#F59E0B"/>
+    <circle cx="14" cy="42" r="3" fill="#F59E0B"/>
+
+    <!-- Layer 2 (middle) -->
+    <circle cx="30" cy="22" r="3" fill="#F8F9FA"/>
+    <circle cx="30" cy="38" r="3" fill="#F8F9FA"/>
+
+    <!-- Layer 3 (right) -->
+    <circle cx="46" cy="30" r="3" fill="#F59E0B"/>
+
+    <!-- Connections between layers -->
+    <g stroke="#F8F9FA" stroke-width="0.7" opacity="0.6">
+      <!-- L1 to L2 -->
+      <line x1="14" y1="18" x2="30" y2="22"/>
+      <line x1="14" y1="18" x2="30" y2="38"/>
+      <line x1="14" y1="30" x2="30" y2="22"/>
+      <line x1="14" y1="30" x2="30" y2="38"/>
+      <line x1="14" y1="42" x2="30" y2="22"/>
+      <line x1="14" y1="42" x2="30" y2="38"/>
+      <!-- L2 to L3 -->
+      <line x1="30" y1="22" x2="46" y2="30"/>
+      <line x1="30" y1="38" x2="46" y2="30"/>
+    </g>
+  </g>
+
+  <!-- Site name: GenMedia -->
+  <text x="80" y="38"
+        font-family="Inter, Arial, sans-serif"
+        font-size="22"
+        font-weight="700"
+        fill="#1E3A8A">Gen<tspan fill="#F59E0B">Media</tspan></text>
+
+  <!-- Tagline -->
+  <text x="80" y="56"
+        font-family="Inter, Arial, sans-serif"
+        font-size="9"
+        fill="#6B7280"
+        letter-spacing="1">Generative AI in Multimedia</text>
+
+</svg>

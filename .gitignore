@@ -1,0 +1,25 @@
+﻿# Claude Code internal files
+.claude/
+CLAUDE.md
+
+# Sensitive student data (delivered separately in submission ZIP)
+students.txt
+
+# Backup files
+*.bak
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python cache (from convert-images.py)
+__pycache__/
+*.pyc
+*.pyo

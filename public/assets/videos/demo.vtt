@@ -1,0 +1,33 @@
+WEBVTT
+
+1
+00:00:03.000 --> 00:00:04.500
+Welcome to GenMedia.
+
+2
+00:00:04.500 --> 00:00:08.000
+A short tour of generative AI in multimedia.
+
+3
+00:00:08.000 --> 00:00:11.700
+We cover image generation with Midjourney and DALL-E.
+
+4
+00:00:11.700 --> 00:00:15.300
+Audio tools that clone voices and compose music.
+
+5
+00:00:15.300 --> 00:00:18.500
+Video models that turn text into clips.
+
+6
+00:00:18.500 --> 00:00:20.700
+And the architectures behind them:
+
+7
+00:00:20.700 --> 00:00:24.700
+diffusion, GANs, and transformers. Built for BMM601,
+
+8
+00:00:24.700 --> 00:00:26.470
+SVU 2026.

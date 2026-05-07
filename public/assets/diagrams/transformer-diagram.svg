@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Transformer Diagram: input tokens, attention, output -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="Inter, Arial, sans-serif">
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A8A">Transformer: Attention Picks What Matters</text>
+
+  <!-- ===== Input tokens ===== -->
+  <text x="120" y="80" font-size="13" font-weight="600" fill="#212529">Input words:</text>
+
+  <g>
+    <!-- "The" -->
+    <rect x="40" y="95" width="60" height="40" rx="6" fill="#1E3A8A"/>
+    <text x="70" y="120" text-anchor="middle" font-size="13" fill="#F8F9FA" font-weight="600">The</text>
+
+    <!-- "cat" (highlighted as the focus) -->
+    <rect x="115" y="95" width="60" height="40" rx="6" fill="#F59E0B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="145" y="120" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">cat</text>
+
+    <!-- "sat" -->
+    <rect x="190" y="95" width="60" height="40" rx="6" fill="#1E3A8A"/>
+    <text x="220" y="120" text-anchor="middle" font-size="13" fill="#F8F9FA" font-weight="600">sat</text>
+
+    <!-- "on" -->
+    <rect x="265" y="95" width="60" height="40" rx="6" fill="#1E3A8A"/>
+    <text x="295" y="120" text-anchor="middle" font-size="13" fill="#F8F9FA" font-weight="600">on</text>
+
+    <!-- "the" -->
+    <rect x="340" y="95" width="60" height="40" rx="6" fill="#1E3A8A"/>
+    <text x="370" y="120" text-anchor="middle" font-size="13" fill="#F8F9FA" font-weight="600">the</text>
+
+    <!-- "mat" (related, also highlighted) -->
+    <rect x="415" y="95" width="60" height="40" rx="6" fill="#F59E0B" stroke="#F59E0B" stroke-width="2"/>
+    <text x="445" y="120" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">mat</text>
+  </g>
+
+  <!-- Attention layer label -->
+  <text x="400" y="175" text-anchor="middle" font-size="13" font-weight="600" fill="#212529">Attention layer asks: "for each word, which other words matter?"</text>
+
+  <!-- Attention layer box -->
+  <g>
+    <rect x="100" y="195" width="600" height="60" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <text x="400" y="220" text-anchor="middle" font-size="13" font-weight="700" fill="#92400E">Self-Attention</text>
+    <text x="400" y="240" text-anchor="middle" font-size="11" fill="#92400E">every word looks at every other word and weighs its importance</text>
+  </g>
+
+  <!-- Arrows: input -> attention layer -->
+  <g stroke="#6B7280" stroke-width="1.5" fill="none" opacity="0.5">
+    <line x1="70"  y1="135" x2="200" y2="195"/>
+    <line x1="145" y1="135" x2="250" y2="195"/>
+    <line x1="220" y1="135" x2="300" y2="195"/>
+    <line x1="295" y1="135" x2="400" y2="195"/>
+    <line x1="370" y1="135" x2="500" y2="195"/>
+    <line x1="445" y1="135" x2="600" y2="195"/>
+  </g>
+
+  <!-- Highlight: cat <-> mat connection -->
+  <path d="M 145 95 Q 295 50 445 95" stroke="#F59E0B" stroke-width="2.5" fill="none" stroke-dasharray="4,3"/>
+  <text x="295" y="48" text-anchor="middle" font-size="10" font-weight="600" fill="#92400E">strong link: "cat" attends to "mat"</text>
+
+  <!-- Output layer -->
+  <text x="400" y="285" text-anchor="middle" font-size="13" font-weight="600" fill="#212529">Output: next word, image patch, or audio sample</text>
+
+  <g>
+    <rect x="320" y="300" width="160" height="50" rx="6" fill="#1E3A8A"/>
+    <text x="400" y="320" text-anchor="middle" font-size="13" fill="#F8F9FA" font-weight="600">predicted output</text>
+    <text x="400" y="338" text-anchor="middle" font-size="10" fill="#F8F9FA" opacity="0.8">(e.g. the next word)</text>
+  </g>
+
+  <!-- arrow attention -> output -->
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrT)">
+    <line x1="400" y1="258" x2="400" y2="296"/>
+  </g>
+
+  <defs>
+    <marker id="arrT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+
+  <!-- Caption -->
+  <text x="400" y="370" text-anchor="middle" font-size="11" font-style="italic" fill="#6B7280">
+    Used in ChatGPT, voice models, and modern multimodal systems. Same idea, different inputs.
+  </text>
+</svg>

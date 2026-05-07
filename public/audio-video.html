@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio &amp; Video Generation — GenMedia</title>
+  <meta name="description" content="AI tools for generating audio and video: ElevenLabs, Suno, Sora, Runway. Includes a sample voiceover and a short video with subtitles.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/logo.svg">
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo/logo.svg" alt="GenMedia Logo">
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="images.html">Image Generation</a></li>
+          <li><a href="audio-video.html">Audio &amp; Video</a></li>
+          <li><a href="how-it-works.html">How it Works</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Page Hero ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Audio &amp; Video Generation</h1>
+      <p>From a written line to a full clip.</p>
+    </div>
+  </section>
+
+  <!-- ============ Audio Intro ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">AI for Sound</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        We were surprised how natural these voices sound now. Modern audio
+        models can clone a voice from just a few seconds of recording, read
+        text aloud in many languages, or compose a short piece of music
+        starting from a one-line description of the mood. We kept this
+        section short — there are many more tools out there we couldn't
+        cover here.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Audio Tools ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Two Audio Tools</h2>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>ElevenLabs</h3>
+          <p>
+            Specializes in realistic voice synthesis and voice cloning.
+            Often used for audiobook narration, dubbing, and accessibility
+            features such as reading articles aloud.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Suno</h3>
+          <p>
+            Generates short songs, including lyrics and instrumental tracks,
+            from a one-line description of the style and mood. Useful for
+            background music in videos and presentations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Audio Sample ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Sample Voiceover</h2>
+
+      <div class="media-block">
+        <audio controls>
+          <source src="assets/audio/voiceover.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <p class="media-caption">A short English voiceover, ~20 seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Video Intro ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">AI for Video</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        Video generation is the newest of the three areas. Today's tools can
+        produce clips of a few seconds with believable motion, lighting,
+        and camera movement. Longer clips are still difficult — its
+        expensive to generate even ten seconds at high quality.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Video Tools ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Two Video Tools</h2>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Sora</h3>
+          <p>
+            OpenAI's text-to-video model. Generates short clips from a
+            written prompt, with surprisingly stable physics and lighting.
+            Available through ChatGPT for paying users.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Runway</h3>
+          <p>
+            Offers Gen-3 for text-to-video and image-to-video, plus a full
+            web editor for trimming, masking, and replacing parts of a clip.
+            Popular with independent filmmakers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Video Sample ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Sample Video</h2>
+
+      <div class="media-block">
+        <video controls>
+          <source src="assets/videos/demo.mp4" type="video/mp4">
+          <track src="assets/videos/demo.vtt" kind="subtitles" srclang="en" label="English" default>
+          Your browser does not support the video element.
+        </video>
+        <p class="media-caption">A short demo clip with synchronized English subtitles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Subtitles & Accessibility ============ -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Subtitles &amp; Accessibility</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        The video above includes a <code>.vtt</code> subtitle file linked
+        through the <code>&lt;track&gt;</code> tag. WebVTT is the standard
+        format for browser-native captions: it makes content accessible to
+        viewers who are deaf or hard of hearing, supports translations, and
+        helps search engines understand the clip's content.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Limitations ============ -->
+  <section style="background-color: white;">
+    <div class="container">
+      <h2 class="section-title">Things to Watch For</h2>
+      <p style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--text-light); font-size: 16px;">
+        Generated audio and video bring real risks: voice cloning can be
+        used for impersonation, music can copy the style of real artists
+        without permission, and short videos can still misrepresent events.
+        Clips should always be labelled as AI-generated, and consent must
+        be obtained before cloning a real person's voice.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 GenMedia — BMM601 Course Assignment, Syrian Virtual University</p>
+      <p>Supervisor: Eng. Talal M. W. Antakieli</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

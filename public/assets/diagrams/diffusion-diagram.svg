@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Diffusion Model Diagram (v2) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440" font-family="Inter, Arial, sans-serif">
+
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A8A">Diffusion: Adding and Removing Noise</text>
+
+  <!-- ===== Forward (top) ===== -->
+  <text x="40" y="65" font-size="13" font-weight="600" fill="#212529">Forward (training):</text>
+  <text x="40" y="82" font-size="11" fill="#6B7280">add a little noise at each step</text>
+
+  <g>
+    <rect x="40" y="95" width="100" height="80" rx="6" fill="#1E3A8A"/>
+    <circle cx="90" cy="135" r="18" fill="#F8F9FA"/>
+    <text x="90" y="190" text-anchor="middle" font-size="11" fill="#212529">clear image</text>
+
+    <rect x="180" y="95" width="100" height="80" rx="6" fill="#2849a8"/>
+    <circle cx="230" cy="135" r="14" fill="#F8F9FA" opacity="0.85"/>
+    <g opacity="0.85">
+      <circle cx="200" cy="110" r="2" fill="#F8F9FA"/>
+      <circle cx="260" cy="115" r="2" fill="#F8F9FA"/>
+      <circle cx="210" cy="155" r="2" fill="#F8F9FA"/>
+      <circle cx="265" cy="155" r="2" fill="#F8F9FA"/>
+      <circle cx="245" cy="105" r="2" fill="#F8F9FA"/>
+      <circle cx="250" cy="160" r="2" fill="#F8F9FA"/>
+    </g>
+    <text x="230" y="190" text-anchor="middle" font-size="11" fill="#212529">+ a little noise</text>
+
+    <rect x="320" y="95" width="100" height="80" rx="6" fill="#5b6db8"/>
+    <circle cx="370" cy="135" r="9" fill="#F8F9FA" opacity="0.6"/>
+    <g opacity="0.9">
+      <circle cx="335" cy="110" r="2" fill="#F8F9FA"/>
+      <circle cx="350" cy="125" r="2" fill="#F8F9FA"/>
+      <circle cx="395" cy="115" r="2" fill="#F8F9FA"/>
+      <circle cx="410" cy="135" r="2" fill="#F8F9FA"/>
+      <circle cx="340" cy="150" r="2" fill="#F8F9FA"/>
+      <circle cx="385" cy="155" r="2" fill="#F8F9FA"/>
+      <circle cx="405" cy="155" r="2" fill="#F8F9FA"/>
+      <circle cx="345" cy="165" r="2" fill="#F8F9FA"/>
+      <circle cx="385" cy="105" r="2" fill="#F8F9FA"/>
+      <circle cx="365" cy="160" r="2" fill="#F8F9FA"/>
+      <circle cx="400" cy="160" r="2" fill="#F8F9FA"/>
+    </g>
+    <text x="370" y="190" text-anchor="middle" font-size="11" fill="#212529">+ more noise</text>
+
+    <rect x="460" y="95" width="100" height="80" rx="6" fill="#9ca3af"/>
+    <g opacity="0.95">
+      <circle cx="470" cy="105" r="1.5" fill="#F8F9FA"/>
+      <circle cx="485" cy="115" r="1.5" fill="#F8F9FA"/>
+      <circle cx="500" cy="108" r="1.5" fill="#F8F9FA"/>
+      <circle cx="515" cy="125" r="1.5" fill="#F8F9FA"/>
+      <circle cx="530" cy="112" r="1.5" fill="#F8F9FA"/>
+      <circle cx="545" cy="120" r="1.5" fill="#F8F9FA"/>
+      <circle cx="555" cy="135" r="1.5" fill="#F8F9FA"/>
+      <circle cx="475" cy="130" r="1.5" fill="#F8F9FA"/>
+      <circle cx="490" cy="142" r="1.5" fill="#F8F9FA"/>
+      <circle cx="505" cy="135" r="1.5" fill="#F8F9FA"/>
+      <circle cx="520" cy="148" r="1.5" fill="#F8F9FA"/>
+      <circle cx="535" cy="155" r="1.5" fill="#F8F9FA"/>
+      <circle cx="548" cy="105" r="1.5" fill="#F8F9FA"/>
+      <circle cx="468" cy="155" r="1.5" fill="#F8F9FA"/>
+      <circle cx="483" cy="160" r="1.5" fill="#F8F9FA"/>
+      <circle cx="498" cy="158" r="1.5" fill="#F8F9FA"/>
+      <circle cx="513" cy="162" r="1.5" fill="#F8F9FA"/>
+      <circle cx="528" cy="135" r="1.5" fill="#F8F9FA"/>
+      <circle cx="543" cy="145" r="1.5" fill="#F8F9FA"/>
+      <circle cx="488" cy="125" r="1.5" fill="#F8F9FA"/>
+      <circle cx="503" cy="120" r="1.5" fill="#F8F9FA"/>
+      <circle cx="518" cy="138" r="1.5" fill="#F8F9FA"/>
+      <circle cx="533" cy="125" r="1.5" fill="#F8F9FA"/>
+      <circle cx="478" cy="145" r="1.5" fill="#F8F9FA"/>
+      <circle cx="493" cy="155" r="1.5" fill="#F8F9FA"/>
+      <circle cx="508" cy="148" r="1.5" fill="#F8F9FA"/>
+      <circle cx="523" cy="158" r="1.5" fill="#F8F9FA"/>
+      <circle cx="540" cy="130" r="1.5" fill="#F8F9FA"/>
+    </g>
+    <text x="510" y="190" text-anchor="middle" font-size="11" fill="#212529">pure noise</text>
+  </g>
+
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arrFwd)">
+    <line x1="145" y1="135" x2="175" y2="135"/>
+    <line x1="285" y1="135" x2="315" y2="135"/>
+    <line x1="425" y1="135" x2="455" y2="135"/>
+  </g>
+
+  <!-- ===== Reverse (bottom) ===== -->
+  <text x="40" y="235" font-size="13" font-weight="600" fill="#212529">Reverse (generation):</text>
+  <text x="40" y="252" font-size="11" fill="#6B7280">remove a little noise at each step, guided by your prompt</text>
+
+  <g>
+    <!-- Pure noise (start, right) -->
+    <rect x="460" y="265" width="100" height="80" rx="6" fill="#9ca3af"/>
+    <g opacity="0.95">
+      <circle cx="470" cy="275" r="1.5" fill="#F8F9FA"/>
+      <circle cx="485" cy="285" r="1.5" fill="#F8F9FA"/>
+      <circle cx="500" cy="278" r="1.5" fill="#F8F9FA"/>
+      <circle cx="515" cy="295" r="1.5" fill="#F8F9FA"/>
+      <circle cx="530" cy="282" r="1.5" fill="#F8F9FA"/>
+      <circle cx="545" cy="290" r="1.5" fill="#F8F9FA"/>
+      <circle cx="555" cy="305" r="1.5" fill="#F8F9FA"/>
+      <circle cx="475" cy="300" r="1.5" fill="#F8F9FA"/>
+      <circle cx="490" cy="312" r="1.5" fill="#F8F9FA"/>
+      <circle cx="505" cy="305" r="1.5" fill="#F8F9FA"/>
+      <circle cx="520" cy="318" r="1.5" fill="#F8F9FA"/>
+      <circle cx="535" cy="325" r="1.5" fill="#F8F9FA"/>
+      <circle cx="548" cy="275" r="1.5" fill="#F8F9FA"/>
+      <circle cx="468" cy="325" r="1.5" fill="#F8F9FA"/>
+      <circle cx="483" cy="330" r="1.5" fill="#F8F9FA"/>
+      <circle cx="498" cy="328" r="1.5" fill="#F8F9FA"/>
+      <circle cx="513" cy="332" r="1.5" fill="#F8F9FA"/>
+      <circle cx="528" cy="305" r="1.5" fill="#F8F9FA"/>
+      <circle cx="543" cy="315" r="1.5" fill="#F8F9FA"/>
+      <circle cx="488" cy="295" r="1.5" fill="#F8F9FA"/>
+      <circle cx="503" cy="290" r="1.5" fill="#F8F9FA"/>
+      <circle cx="518" cy="308" r="1.5" fill="#F8F9FA"/>
+      <circle cx="533" cy="295" r="1.5" fill="#F8F9FA"/>
+      <circle cx="478" cy="315" r="1.5" fill="#F8F9FA"/>
+      <circle cx="493" cy="325" r="1.5" fill="#F8F9FA"/>
+      <circle cx="508" cy="318" r="1.5" fill="#F8F9FA"/>
+      <circle cx="523" cy="328" r="1.5" fill="#F8F9FA"/>
+      <circle cx="540" cy="300" r="1.5" fill="#F8F9FA"/>
+    </g>
+    <text x="510" y="360" text-anchor="middle" font-size="11" fill="#212529">start: noise</text>
+
+    <!-- a bit cleaner -->
+    <rect x="320" y="265" width="100" height="80" rx="6" fill="#5b6db8"/>
+    <circle cx="370" cy="305" r="9" fill="#F8F9FA" opacity="0.6"/>
+    <g opacity="0.9">
+      <circle cx="335" cy="280" r="2" fill="#F8F9FA"/>
+      <circle cx="350" cy="295" r="2" fill="#F8F9FA"/>
+      <circle cx="395" cy="285" r="2" fill="#F8F9FA"/>
+      <circle cx="410" cy="305" r="2" fill="#F8F9FA"/>
+      <circle cx="340" cy="320" r="2" fill="#F8F9FA"/>
+      <circle cx="385" cy="325" r="2" fill="#F8F9FA"/>
+      <circle cx="405" cy="325" r="2" fill="#F8F9FA"/>
+      <circle cx="345" cy="335" r="2" fill="#F8F9FA"/>
+      <circle cx="385" cy="275" r="2" fill="#F8F9FA"/>
+    </g>
+    <text x="370" y="360" text-anchor="middle" font-size="11" fill="#212529">a bit cleaner</text>
+
+    <!-- almost -->
+    <rect x="180" y="265" width="100" height="80" rx="6" fill="#2849a8"/>
+    <circle cx="230" cy="305" r="14" fill="#F8F9FA" opacity="0.85"/>
+    <g opacity="0.85">
+      <circle cx="200" cy="280" r="2" fill="#F8F9FA"/>
+      <circle cx="260" cy="285" r="2" fill="#F8F9FA"/>
+      <circle cx="210" cy="325" r="2" fill="#F8F9FA"/>
+      <circle cx="265" cy="325" r="2" fill="#F8F9FA"/>
+    </g>
+    <text x="230" y="360" text-anchor="middle" font-size="11" fill="#212529">almost there</text>
+
+    <!-- final clear -->
+    <rect x="40" y="265" width="100" height="80" rx="6" fill="#1E3A8A"/>
+    <circle cx="90" cy="305" r="18" fill="#F8F9FA"/>
+    <text x="90" y="360" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">final image</text>
+  </g>
+
+  <!-- Reverse arrows -->
+  <g stroke="#F59E0B" stroke-width="2.5" fill="none" marker-end="url(#arrRev)">
+    <line x1="455" y1="305" x2="425" y2="305"/>
+    <line x1="315" y1="305" x2="285" y2="305"/>
+    <line x1="175" y1="305" x2="145" y2="305"/>
+  </g>
+
+  <!-- prompt callout -->
+  <g>
+    <rect x="600" y="280" width="170" height="50" rx="6" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+    <text x="685" y="300" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E">your text prompt</text>
+    <text x="685" y="316" text-anchor="middle" font-size="10" fill="#92400E">"a quiet library at sunset"</text>
+    <line x1="600" y1="305" x2="565" y2="305" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <defs>
+    <marker id="arrFwd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrRev" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="420" text-anchor="middle" font-size="11" font-style="italic" fill="#6B7280">
+    The model learns to undo noise. To generate, it starts from pure noise and reverses the process step by step.
+  </text>
+</svg>
